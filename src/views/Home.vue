@@ -33,14 +33,6 @@ Home.vue
 						/>
 					</us-form-group>
 
-					<!-- Transparent -->
-					<div class="mright-md mbottom-sm flex mtop-md">
-						<div class="flex column flex-center">
-							<input type="checkbox" class="toggle yes-no" id="transToggle" v-model="qr.transparent"/>
-						</div>
-						<label class="flex column flex-center mleft-sm" for="transToggle">Transparent Background</label>
-					</div>
-
 					<!-- Code Color -->
 					<us-form-group 
 						help-text="Hex or rgb(a) values accepted. Formatted #FFFFFF or rgba(150, 150, 150, 0.5)" 
@@ -50,6 +42,14 @@ Home.vue
 						<us-form-input name="QRForeground" v-model="qr.foreground" placeholder="000000/"/>
 
 					</us-form-group>
+
+						<!-- Transparent -->
+					<div class="mright-md mbottom-sm flex mtop-md">
+						<div class="flex column flex-center">
+							<input type="checkbox" class="toggle yes-no" id="transToggle" v-model="qr.transparent"/>
+						</div>
+						<label class="flex column flex-center mleft-sm" for="transToggle">Transparent Background</label>
+					</div>
 
 					<!-- Background Color -->
 					<us-form-group 
