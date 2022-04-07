@@ -84,7 +84,7 @@ Home.vue
 
 				<!-- QR Code Canvas / Plugin -->
 				<div class="margin-auto align-center ptop-md pbottom-md">
-					<qrcode-vue :value="qr.url" :size="300" level="Q" :foreground="qr.foreground" :background="qr.background" class="qr-element" />
+					<qrcode-vue :value="qr.url" :size="300" level="Q" margin="100" :foreground="qr.foreground" :background="qr.background" class="qr-element" />
 				</div>
 
 				
@@ -213,6 +213,7 @@ export default {
 			var canvas = document.getElementsByTagName("canvas")[0],
 				context = canvas.getContext("2d");
 
+
 			// Get logo based on theme choice
 			var logoRef = "";
 			// this.qr.foreground = "#000000";
@@ -233,7 +234,6 @@ export default {
 			base_image.src = logoRef;
 			
 			base_image.onload = function(){
-
 				// Clear center before logo and set Transparency
 				// If transparent
 				if(_this.qr.transparent){
@@ -271,6 +271,15 @@ export default {
 				// Draw image
 				context.drawImage(base_image, 105, 105, 90, 90);
 
+				// Increase canvase height
+				context.fillStyle = _this.qr.foreground;
+
+				// Add URL to bottom
+				// context.font = "bold 18px Arial";
+				// context.textAlign = "center";
+				// var write = _this.qr.url;
+				// context.fillText(write, 150, 300);
+
 			};
 		},
 
@@ -302,6 +311,7 @@ export default {
 
 	@media (max-width: $screenSM) {
 		flex-wrap: wrap;
+		padding:  25px var(--sidePadding);
     }
 
 	#qrLeft{
@@ -326,7 +336,6 @@ export default {
 			min-width: unset;
 			padding: 25px;
 		}
-
 	}
 }
 

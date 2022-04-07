@@ -9,7 +9,9 @@
 		<!-- USGS Headers -->
 		<div id="requiredHeaders">
 			<div id="usgsHeader">
-				<img src="@/assets/branding/usgs-tagline.png" title="USGS Logo" alt="USGS Logo"/>
+				<a href="https://usgs.gov" target="_blank">
+					<img src="@/assets/branding/usgs-tagline.png" title="USGS Logo" alt="USGS Logo"/>
+				</a>
 			</div>
 		</div>
 
@@ -19,9 +21,9 @@
 		<div id="appBar">
 
 			<!-- Logo -->
-			<router-link id="logo" to="/" tabindex="0" aria-label="Home">
+			<a id="logo" href="https://wim.usgs.gov" tabindex="0" aria-label="WIM Home">
 				<img src="@/assets/branding/wim_stacked_web.png" title="Logo" alt="Logo"/>
-			</router-link>
+			</a>
 
 			<div id="appName">
 				QR Code Generator
@@ -62,11 +64,6 @@ export default {
 		box-sizing: border-box;
 		transition: all 0.2s ease;
 		background-color: var(--background);
-
-		// Adjust padding and height on smaller screens
-		@media (max-width: $screenSM) {
-			padding: 0 8px 0px 8px;
-		}
 
 
 		#requiredHeaders{
