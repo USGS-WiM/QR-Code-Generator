@@ -1,0 +1,35 @@
+// routes.js
+// Defined routes for Vue router to use
+
+let AppName = process.env.VUE_APP_COMPANY_NAME;
+
+
+export const routes = [
+	// * Default Page
+	{
+		path: "/",
+		name: "home",
+		component: () => import(/* webpackChunkName: "home" */ "./views/Home.vue"),
+		meta: {
+			title: AppName + " — Home",
+		}
+	},
+	// 
+	// ! Other Pages
+	// 
+	// * 404 Page
+	{
+		path: "/404/",
+		name: "error-404",
+		component: () => import(/* webpackChunkName: "error-404" */ "./views/other/Error404.vue"),
+		meta: {
+			title: "404 - Page not Found — " + AppName,
+		}
+	},
+	// 
+	// ! Redirect to 404 if route does not exist
+	{
+		path: "*",
+		redirect: "/404/"
+	}
+];
