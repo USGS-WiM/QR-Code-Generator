@@ -1,11 +1,14 @@
 ![WiM](wimlogo.png)
 
 
-# Frame Templates Generator
+# QR Code Generator
 
-This project takes a URL (Storymap, Experience, Tableau, other) and other information and generates a single index.html file with government headers and footers, with the URL in an iFrame in between, giving you a website compliant with the USGS Visual identity guidelines for websites. 
 
-Also includes templates for Geoplatform and National Park Service.
+Takes a URL and creates a QR code with USGS/WIM logos in the center.
+Custom code and background colors, transparency.
+
+Using plugin qrcode.vue.
+
 
 ### Prerequisites
 
@@ -50,7 +53,7 @@ npm run lint
 
 * [Vue](https://vuejs.org)
 * [USWDS](https://designsystem.digital.gov/)
-
+* [qrcode.vue](https://www.npmjs.com/package/qrcode.vue)
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us. Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on adhering by the [USGS Code of Scientific Conduct](https://www2.usgs.gov/fsp/fsp_code_of_scientific_conduct.asp).
@@ -68,7 +71,6 @@ To push tags to remote origin: `git push origin --tags`
 ## Authors
 
 * **[Mitch Samuels](https://github.com/mitchas)**  - *Lead Developer* - [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
-* **[Jamie Velkoverh](mailto:JVELKOVERH@USGS.GOV)** - *Geonarrative Coordinator* -  [USGS Web Informatics & Mapping](https://wim.usgs.gov/)
 
 See also the list of [contributors](../../graphs/contributors) who participated in this project.
 
